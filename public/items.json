@@ -1,0 +1,56 @@
+[
+  {
+    "id" : 1,
+      "name": "Emergency Services",
+      "description": "Eastman Dental's Howitt Urgent Dental Care is the only dedicated urgent dental care facility in the region, treating adults for acute tooth and gum pain, dental infections and abscess, broken teeth and other dental trauma or urgent dental issues.",
+      "img": "https://i.ibb.co/r0FpdYV/sercice3.jpghttps://i.ibb.co/tKHsXz3/p1.jpg",
+      "quantity": 5,
+      "price" : 100,
+      "supplier name": "POLO"
+  },
+  {
+      "id" : 2,
+      "name": "Fees and Insurance",
+      "description": "Fees vary by the level of dental provider, such as our faculty group practice or our resident dentist.Many patients select resident care because the cost is significantly discounted in consideration of participation in the educational process",
+      "img": "https://i.ibb.co/JtXSc23/p2.jpg",
+      "quantity": 5,
+      "price" : 200,
+      "supplier name": "BVLGARI"
+  },
+  {
+    "id" : 3,
+      "name": "Fees and Insurance",
+      "description": "Fees vary by the level of dental provider, such as our faculty group practice or our resident dentist.Many patients select resident care because the cost is significantly discounted in consideration of participation in the educational process",
+      "img": "https://i.ibb.co/r0FpdYV/sercice3.jpghttps://i.ibb.co/tKHsXz3/p1.jpghttps://i.ibb.co/fqpQ3ft/p3.jpg",   
+      "quantity": 5,
+      "price" : 160,
+      "supplier name": "BOSS"
+  },
+  {
+    "id" : 4,
+      "name": "Fees and Insurance",
+      "description": "Fees vary by the level of dental provider, such as our faculty group practice or our resident dentist.Many patients select resident care because the cost is significantly discounted in consideration of participation in the educational process",
+      "img": "https://i.ibb.co/GC5JLRC/service2.jpg",
+      "quantity": 5,
+      "price" : 180,
+      "supplier name": "SCANDAL"
+  },
+  {
+    "id" : 5,
+      "name": "Fees and Insurance",
+      "description": "Fees vary by the level of dental provider, such as our faculty group practice or our resident dentist.Many patients select resident care because the cost is significantly discounted in consideration of participation in the educational process",
+      "img": "https://i.ibb.co/GC5JLRC/service2.jpg",
+      "quantity": 5,
+      "price" : 600,
+      "supplier name": "SO SCANDALI"
+  },
+  {
+    "id" : 6,
+      "name": "Locations and Hours",
+      "description": "Please note office hours and appointment times may vary during the COVID-19 pandemic. Please see current office hours below. We appreciate your understanding and patience.",
+      "img": "https://www.capitaldentistry.ca/wp-content/uploads/2020/01/location-hero-01.jpg",
+      "quantity": 5,
+      "price" : 900,
+      "supplier name": "BLACK OPIUM"
+  }
+]

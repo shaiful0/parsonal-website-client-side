@@ -1,0 +1,11 @@
+.items{
+  text-align: center;
+  border: 1px solid orange;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 10px;
+}
+.items img{
+  height: 250px;
+  width: 200px;
+}

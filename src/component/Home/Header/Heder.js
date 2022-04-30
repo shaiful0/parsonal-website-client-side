@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Heder = () => {
+  const [user] = useAuthState(auth);
+  const userSignOut = () =>{
+    signOut(auth);
+  }
   return (
     <Navbar collapseOnSelect expand="lg" sticky='top' bg="success" variant="dark">
     <Container>
@@ -14,10 +21,14 @@ const Heder = () => {
         <Nav.Link href="#pricing">Pricing</Nav.Link>
       </Nav>
       <Nav>
+        <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
         <Nav.Link href="#deets">More deets</Nav.Link>
-        <Nav.Link eventKey={2} href="#memes">
-          Dank memes
-        </Nav.Link>
+        {
+          user?
+          <button className='btn btn-link text-white text-decoration-none' onClick={userSignOut}>sign out</button>
+          :
+        <Nav.Link as={Link} to="/login">Login</Nav.Link>
+        }
       </Nav>
     </Navbar.Collapse>
     </Container>
