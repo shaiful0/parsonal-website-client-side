@@ -17,15 +17,15 @@ const Login = () => {
   const navigate = useNavigate('');
   const location = useLocation();
 
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || '/';
 
 
-  const loginSubmit = event =>{
+  const loginSubmit = async event =>{
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    console.log(email,password);
-    signInWithEmailAndPassword(email, password);
+    // console.log(email,password);
+    await signInWithEmailAndPassword(email, password);
   }
 
   if (user) {

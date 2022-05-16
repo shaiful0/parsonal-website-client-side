@@ -15,10 +15,11 @@ const Items = () => {
       <h2>Items</h2>
     <div className='items-container'>
     {
-        items.map(item => <Item
+        items.slice(0,6)?.map(item => <Item
         key={item._id}
         item={item}
         ></Item>)
+        
       }
     </div>
     </div>

@@ -1,0 +1,9 @@
+.item-page{
+  display: flex;
+}
+.item-box{
+  border: 1px solid goldenrod;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin: 30px;
+}
