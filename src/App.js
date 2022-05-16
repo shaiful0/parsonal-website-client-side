@@ -12,6 +12,8 @@ import RequireAuth from './component/RequireAuth/RequireAuth';
 import Itemt from './component/Home/Itemt/Itemt';
 import ManageItem from './component/ManageItem/ManageItem';
 import AddItem from './component/AddItem/AddItem';
+import MyItems from './component/MyItems/MyItems';
+import About from './component/Home/About/About';
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        {/* <Route path='/item/:itemId' element={<Itemt></Itemt>}></Route> */}
+        <Route path='/about' element={<About></About>}></Route>
         <Route path='/itemdetails/:itemId' element={ 
         <RequireAuth>
           <ItemDetails></ItemDetails>
@@ -36,6 +38,11 @@ function App() {
         <Route path='/additem' element={ 
         <RequireAuth>
           <AddItem></AddItem>
+        </RequireAuth>
+        }></Route>
+        <Route path='/myitems' element={ 
+        <RequireAuth>
+          <MyItems></MyItems>
         </RequireAuth>
         }></Route>
         <Route path='/register' element={<Register></Register>}></Route>

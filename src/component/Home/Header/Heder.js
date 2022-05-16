@@ -27,6 +27,7 @@ const Heder = () => {
             user && <>
             <Nav.Link as={Link} to="manage">Manage Items</Nav.Link>
             <Nav.Link as={Link} to="additem">Add Items</Nav.Link>
+            <Nav.Link as={Link} to="myitems">My Items</Nav.Link>
             </>
           }
         {
