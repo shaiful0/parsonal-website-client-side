@@ -10,8 +10,8 @@ import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const navigate = useNavigate();
   const manageButton = () =>{
-    navigate('/manage')
-  }
+    navigate('/manage');
+  };
   return (
     <div>
       <img src={perfum} alt="" />

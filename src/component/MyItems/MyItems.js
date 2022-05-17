@@ -36,7 +36,7 @@ const MyItems = () => {
           setItem(remaining)
         })
     }
-  }
+  };
 
   return (
     <div>
