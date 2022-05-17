@@ -42,7 +42,7 @@ const Login = () => {
 
   if(error){
     errorMessage = <p className='text-danger'>Error: {error?.message}</p>
-  }
+  };
 
   const resetPassword = async () => {
     const email = emailRef.current.value;

@@ -19,7 +19,7 @@ const AddItem = () => {
     .then(result =>{
       console.log(result);
     })
-  } 
+  }; 
   return (
     <div className='add-items'>
       <h2>Add New Item</h2>

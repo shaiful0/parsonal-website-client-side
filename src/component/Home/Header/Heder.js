@@ -9,7 +9,7 @@ const Heder = () => {
   const [user] = useAuthState(auth);
   const userSignOut = () =>{
     signOut(auth);
-  }
+  };
   return (
     <Navbar collapseOnSelect expand="lg" sticky='top' bg="success" variant="dark">
     <Container>
