@@ -9,11 +9,11 @@ import Login from './component/Home/Login/Login';
 import Register from './component/Home/Register/Register';
 import ItemDetails from './component/Home/ItemDetails/ItemDetails';
 import RequireAuth from './component/RequireAuth/RequireAuth';
-import Itemt from './component/Home/Itemt/Itemt';
 import ManageItem from './component/ManageItem/ManageItem';
 import AddItem from './component/AddItem/AddItem';
 import MyItems from './component/MyItems/MyItems';
 import About from './component/Home/About/About';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -50,6 +50,7 @@ function App() {
         
       </Routes>
       <Footer></Footer>
+      <ToastContainer/>
     </div>
   );
 }

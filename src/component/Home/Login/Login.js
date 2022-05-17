@@ -1,7 +1,10 @@
+import axios from 'axios';
 import { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword  } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
@@ -18,6 +21,7 @@ const Login = () => {
   const location = useLocation();
 
   let from = location.state?.from?.pathname || '/';
+  let errorMessage;
 
 
   const loginSubmit = async event =>{
@@ -26,10 +30,29 @@ const Login = () => {
     const password = passwordRef.current.value;
     // console.log(email,password);
     await signInWithEmailAndPassword(email, password);
+    const {data} = await axios.post('http://localhost:5000/login',{email})
+    localStorage.setItem('accessToken',data.accessToken);
+    // navigate(from, { replace: true });
   }
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   if (user) {
     navigate(from, { replace: true });
+  }
+
+  if(error){
+    errorMessage = <p className='text-danger'>Error: {error?.message}</p>
+  }
+
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast('Sent email');
+    }
+    else{
+      toast('Please enter your email address');
+    }
   }
 
  
@@ -50,7 +73,9 @@ const Login = () => {
           Submit
         </Button>
       </Form>
+      {errorMessage}
       <p>New at Perfume house? <Link to={"/register"} className='text-primary text-decoration-none'>Please Register</Link></p>
+      <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
       <SocialLogin></SocialLogin>
     </div>
   );
