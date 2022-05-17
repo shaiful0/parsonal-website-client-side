@@ -23,9 +23,9 @@ const ManageItem = () => {
           console.log(data);
           const remaining = items.filter(item => item._id !== id);
           setItems(remaining)
-        })
+        });
     }
-  }
+  };
 
   return (
     <div>
