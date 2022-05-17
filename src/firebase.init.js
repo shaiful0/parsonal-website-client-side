@@ -1,17 +1,17 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import {getAuth} from "firebase/auth"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-import {getAuth} from "firebase/auth"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBst5StVpSOJLPZ8q3Rb-32SwU_qWyE2FE",
-  authDomain: "perfume-house-66ea6.firebaseapp.com",
-  projectId: "perfume-house-66ea6",
-  storageBucket: "perfume-house-66ea6.appspot.com",
-  messagingSenderId: "438740492090",
-  appId: "1:438740492090:web:dc6a645a8773cfd612fa03"
+  apiKey: "AIzaSyCRfCZaaAOvg91B6rF19UJASHu0ObWhViE",
+  authDomain: "perfume-house-6d883.firebaseapp.com",
+  projectId: "perfume-house-6d883",
+  storageBucket: "perfume-house-6d883.appspot.com",
+  messagingSenderId: "925942367046",
+  appId: "1:925942367046:web:f0845d6d06833709421b47"
 };
 
 // Initialize Firebase
