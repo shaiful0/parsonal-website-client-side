@@ -10,5 +10,5 @@ useEffect(() => {
     .then(data => setItems(data));
 }, []);
 return [items, setItems]
-}
+};
 export default useItems;

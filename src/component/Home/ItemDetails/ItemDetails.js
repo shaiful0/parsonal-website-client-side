@@ -31,7 +31,7 @@ const ItemDetails = () => {
       const remaining = items.filter(item => item._id!==id);
       setItems(remaining)
     })
-  }
+  };
 
 
   const submitFrom = data =>{
@@ -48,7 +48,7 @@ const ItemDetails = () => {
     .then(result =>{
       console.log(result);
     })
-  } 
+  }; 
 
 
   return (

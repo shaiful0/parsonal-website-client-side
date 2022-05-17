@@ -9,7 +9,7 @@ const ManageItem = () => {
 
   const addItemButton = () => {
     navigate('/additem')
-  }
+  };
 
   const handleDelete = id => {
     const sure = window.confirm('are you want to delete?');
