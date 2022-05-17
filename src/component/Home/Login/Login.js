@@ -30,7 +30,7 @@ const Login = () => {
     const password = passwordRef.current.value;
     // console.log(email,password);
     await signInWithEmailAndPassword(email, password);
-    const {data} = await axios.post('http://localhost:5000/login',{email})
+    const {data} = await axios.post('https://stormy-brushlands-39122.herokuapp.com/login',{email})
     localStorage.setItem('accessToken',data.accessToken);
     // navigate(from, { replace: true });
   }

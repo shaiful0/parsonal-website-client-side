@@ -13,7 +13,7 @@ const ItemDetails = () => {
   const [item, setItem] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/items/${itemId}`;
+    const url = `https://stormy-brushlands-39122.herokuapp.com/items/${itemId}`;
     fetch(url)
       .then(res => res.json())
       .then(data => setItem(data));
@@ -21,7 +21,7 @@ const ItemDetails = () => {
 
 
   const itemDelete = id =>{
-    const url = `http://localhost:5000/items/${id}`;
+    const url = `https://stormy-brushlands-39122.herokuapp.com/items/${id}`;
     fetch(url, {
       method: 'DELETE'
     })
@@ -36,7 +36,7 @@ const ItemDetails = () => {
 
   const submitFrom = data =>{
     console.log(data);
-    const url = `http://localhost:5000/items`;
+    const url = `https://stormy-brushlands-39122.herokuapp.com/items`;
     fetch(url,{
       method:'POST',
       headers: {
